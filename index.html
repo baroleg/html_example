@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to HTML</title>
+    <title>Материалы по курсу цифровой кафедры</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
             padding: 20px;
         }
         h1 {
@@ -19,25 +20,80 @@
             line-height: 1.6;
             color: #555;
         }
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
     </style>
 </head>
+
 <body>
 
-    <h1>Как настроить GitHub Pages</h1>
-    <p>
+    <div class="container">
+        <h1 class="my-4">Как настроить GitHub Pages</h1>
         <ul>
-            <li>На странице вашего репозитория нажмите на вкладку Settings (Настройки).</li>
-            <li>В меню слева выберите раздел Pages (GitHub Pages).</li>
-            <li>В разделе Branch (Ветка) выберите ветку, из которой будет развертываться сайт. По умолчанию это ветка main или master.</li>
-            <li>Выберите каталог. Если все ваши файлы находятся в корневом каталоге, выберите опцию / (root).</li>
-            <li>Нажмите Save (Сохранить).</li>
-            <li>После сохранения, GitHub укажет вам URL вашего сайта. Например: https://username.github.io/repository-name/.</li>
+            <li>На странице вашего репозитория нажмите на вкладку <b>Settings</b> (Настройки).</li>
+            <li>В меню слева выберите раздел <b>Pages</b> (GitHub Pages).</li>
+            <li>В разделе <b>Branch</b> (Ветка) выберите ветку, из которой будет развертываться сайт (например, <i>main</i>).</li>
+            <li>Выберите каталог. Если файлы в корневом каталоге, выберите <b>/ (root)</b>.</li>
+            <li>Нажмите <b>Save</b> (Сохранить).</li>
+            <li>После сохранения GitHub укажет вам URL вашего сайта, например: <i>https://username.github.io/repository-name/</i>.</li>
         </ul>
-    </p>
-	
-	<h2>А это ваши результаты</h2>
-	
-	<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0vy76FdRDWtLbvVm3HewcAsSMNha9DUyLZ5t1cJEkJ1YPhyousbMeP_TMR5IHFGPQL5Tm-HIwHEmD/pubhtml?gid=1563379608&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
+        <h2 class="my-4">Результаты в таблицах</h2>
+
+        <!-- Вкладки -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="table1-tab" data-bs-toggle="tab" data-bs-target="#table1" type="button"
+                    role="tab" aria-controls="table1" aria-selected="true">ЦК-FT-09</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="table2-tab" data-bs-toggle="tab" data-bs-target="#table2" type="button"
+                    role="tab" aria-controls="table2" aria-selected="false">ЦК-FT-16</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="table3-tab" data-bs-toggle="tab" data-bs-target="#table3" type="button"
+                    role="tab" aria-controls="table3" aria-selected="false">ЦК-FT-19</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="table4-tab" data-bs-toggle="tab" data-bs-target="#table4" type="button"
+                    role="tab" aria-controls="table4" aria-selected="false">ЦК-FT-91</button>
+            </li>
+			<li class="nav-item" role="presentation">
+                <button class="nav-link" id="table4-tab" data-bs-toggle="tab" data-bs-target="#table5" type="button"
+                    role="tab" aria-controls="table4" aria-selected="false">ЦК-FR-09</button>
+            </li>
+			<li class="nav-item" role="presentation">
+                <button class="nav-link" id="table4-tab" data-bs-toggle="tab" data-bs-target="#table6" type="button"
+                    role="tab" aria-controls="table4" aria-selected="false">ЦК-FR-10</button>
+            </li>
+        </ul>
+
+        <div class="tab-content my-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="table1" role="tabpanel" aria-labelledby="table1-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0vy76FdRDWtLbvVm3HewcAsSMNha9DUyLZ5t1cJEkJ1YPhyousbMeP_TMR5IHFGPQL5Tm-HIwHEmD/pubhtml?gid=1563379608&single=true&widget=true&headers=false"></iframe>
+            </div>
+            <div class="tab-pane fade" id="table2" role="tabpanel" aria-labelledby="table2-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0vy76FdRDWtLbvVm3HewcAsSMNha9DUyLZ5t1cJEkJ1YPhyousbMeP_TMR5IHFGPQL5Tm-HIwHEmD/pubhtml?gid=53734810&single=true&widget=true&headers=false"></iframe>
+            </div>
+            <div class="tab-pane fade" id="table3" role="tabpanel" aria-labelledby="table3-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0vy76FdRDWtLbvVm3HewcAsSMNha9DUyLZ5t1cJEkJ1YPhyousbMeP_TMR5IHFGPQL5Tm-HIwHEmD/pubhtml?gid=2121324295&single=true&widget=true&headers=false"></iframe>
+            </div>
+            <div class="tab-pane fade" id="table4" role="tabpanel" aria-labelledby="table4-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS0vy76FdRDWtLbvVm3HewcAsSMNha9DUyLZ5t1cJEkJ1YPhyousbMeP_TMR5IHFGPQL5Tm-HIwHEmD/pubhtml?gid=100007582&single=true&widget=true&headers=false"></iframe>
+            </div>
+            <div class="tab-pane fade" id="table5" role="tabpanel" aria-labelledby="table4-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSY3s3bqTbJQlh8DY8JDUGvtKCZAB51yYyzU0Wd9bBAGfvzJG8KSPQIyaf-U0MDdKVt5_nI5sYNtM_X/pubhtml?gid=2070310931&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </div>
+            <div class="tab-pane fade" id="table6" role="tabpanel" aria-labelledby="table4-tab">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSY3s3bqTbJQlh8DY8JDUGvtKCZAB51yYyzU0Wd9bBAGfvzJG8KSPQIyaf-U0MDdKVt5_nI5sYNtM_X/pubhtml?gid=626746761&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
