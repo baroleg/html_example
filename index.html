@@ -25,13 +25,50 @@
             height: 400px;
         }
     </style>
+	<script>
+	const fs = require('fs');
+
+	// Читаем файл data.json
+	fs.readFile('data.json', 'utf8', (err, data) => {
+		if (err) {
+			console.error('Ошибка чтения файла:', err);
+			return;
+		}
+
+		try {
+			// Преобразуем JSON-строку в массив
+			const strings = JSON.parse(data);
+
+			if (!Array.isArray(strings)) {
+				throw new Error('Неверный формат данных. Ожидается массив строк.');
+			}
+
+			// Функция для выбора случайной строки
+			function getRandomString() {
+				const randomIndex = Math.floor(Math.random() * strings.length);
+				console.log(strings[randomIndex]);
+			}
+
+			// Выводим случайную строку каждые 30 секунд
+			getRandomString(); // Выводим сразу первую строку
+			setInterval(getRandomString, 30000); // Затем каждые 30 секунд
+		} catch (parseErr) {
+			console.error('Ошибка разбора JSON:', parseErr);
+		}
+	});
+
+	</script>
 </head>
 
 <body>
 	<div class="container">
 		<div>
 			<h2>Скоро тут будут все лабораторные</h2>
+			<p>Мечты не сбываются, лабораторные ищите в телеграм каналах</p>
 		</div>
+	</div>
+	
+	<div class="container">
 	</div>
 
     <div class="container">
